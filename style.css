@@ -1,0 +1,159 @@
+/* Responsive & Centered Layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #f8f6bc, #dcedfb);
+  padding: 20px;
+  transition: background 0.5s ease-in-out;
+}
+
+.container {
+  background: linear-gradient(120deg, #fcf56c, #66b8fc);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.balance h2, .balance h3 {
+  text-align: center;
+  margin: 10px 0;
+  color: #222;
+}
+
+/* Income & Expense Summary */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: #fcfcff;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.summary:hover {
+  background-color: #ecf7ff;
+}
+
+.plus {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.minus {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+input, select, button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #6e6969;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #f4f6f8;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Button Style */
+button {
+  /* background-color: #ff0000; */
+  background: linear-gradient(120deg, #fae102, #0260ac);
+  color: rgb(251, 251, 251);
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Transactions List */
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+li {
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 5px solid green;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background-color: #e2ecf5;
+}
+
+li.expense {
+  border-left-color: #dc3545;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input, select, button {
+    font-size: 0.95rem;
+  }
+}
